@@ -1,0 +1,56 @@
+<!--信1603 李敦岳 20163520-->
+<!--用户在此页面输入信息，在judge.jsp页面判断-->
+<!--登录信息不正确就跳转到fail.html-->
+<!--登录信息正确就前往success.jsp-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>login.html</title>
+<script type ="text/javascript"> 
+<!--判断输入是否为空，为空弹出提示-->
+function check()
+{
+	if(form1.text1.value=="")
+		{
+		   alert("请输入用户名！");
+		   return false;
+		}
+	if(form1.text2.value=="")  
+	 {
+	 alert("请输入密码！")  
+	 return false;  
+	 }  
+	
+}  
+  
+</script>
+</head>
+<body> 
+  <!--只要有信息就前往judge.jsp-->
+  
+  <form name ="form1" method ="POST" action ="judge.jsp" 
+  style ="text-align:center" onsubmit="return check()">
+  <!--页面信息-->
+  
+   <h2 align="center"><font color="red"> 用户注册页面</font></h2> 
+   <table align="center" border="2">  
+     <tr>
+       <td> 用户名:</td>
+       <td><input type ="text" name ="text1" size="22" >
+        </td>
+     </tr>
+     <tr>
+       <td>密码:</td>
+       <td><input type ="text" name ="text2" size="22" ></td>
+     </tr>
+     <tr>
+       <td align="center" colspan="2">
+       <input type="submit" value="提交"> 
+       <input type="reset" value="重置">
+       </td>
+     </tr>
+    </table>  
+  </form> 
+</body>
+</html>
